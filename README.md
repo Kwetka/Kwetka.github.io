@@ -498,49 +498,49 @@
                 <div class="card">
                     <h3>Соня-лежебока</h3>
                     <div class="meta"><span><i class="far fa-calendar-alt"></i> 12.06.2026</span><span><i class="far fa-comment"></i> 14</span></div>
-                    <p>Рыжая Соня обожает спать на солнце. За день она меняет 5 мест, но всегда находит самый тёплый уголок ☀️</p>
+                    <p>Рыжая Соня обожает спать на солнце. За день она меняет 5 мест, но всегда находит самый тёплый уголок</p>
                     <div class="tags"><span class="tag">#лежебока</span><span class="tag">#солнце</span><span class="tag">#рыжий</span></div>
                 </div>
                 <div class="card">
                     <h3>Мурзик-исследователь</h3>
                     <div class="meta"><span><i class="far fa-calendar-alt"></i> 10.06.2026</span><span><i class="far fa-comment"></i> 8</span></div>
-                    <p>Мурзик открыл новую коробку из-под чайника. Теперь это его личная крепость, вход строго по паролю.</p>
+                    <p>Мурзик открыл для себя новую коробку - из-под чайника. Теперь это его личная крепость.</p>
                     <div class="tags"><span class="tag">#исследователь</span><span class="tag">#коробки</span><span class="tag">#крепость</span></div>
                 </div>
                 <div class="card">
                     <h3>Королева Багира</h3>
                     <div class="meta"><span><i class="far fa-calendar-alt"></i> 08.06.2026</span><span><i class="far fa-comment"></i> 21</span></div>
-                    <p>Чёрная красавица Багира требует почесать ей живот. Но только когда она сама этого захочет. График — по настроению.</p>
+                    <p>Чёрная красавица Багира требует почесать ей живот. Но только когда она сама этого захочет.</p>
                     <div class="tags"><span class="tag">#королева</span><span class="tag">#черная</span><span class="tag">#нежность</span></div>
                 </div>
                 <div class="card">
                     <h3>Котята-карапузы</h3>
                     <div class="meta"><span><i class="far fa-calendar-alt"></i> 05.06.2026</span><span><i class="far fa-comment"></i> 32</span></div>
-                    <p>Трое малышей устроили гонки по коридору. Победила дружба и разбитая ваза (но мы не будем о грустном).</p>
-                    <div class="tags"><span class="tag">#карапузы</span><span class="tag">#игры</span><span class="tag">#гонки</span></div>
+                    <p>Трое малышей устроили гонки по коридору. Победила дружба.</p>
+                    <div class="tags"><span class="tag">#котята</span><span class="tag">#игры</span><span class="tag">#перегонки</span></div>
                 </div>
                 <div class="card">
-                    <h3>Васька-охотник</h3>
+                    <h3>Васька</h3>
                     <div class="meta"><span><i class="far fa-calendar-alt"></i> 03.06.2026</span><span><i class="far fa-comment"></i> 17</span></div>
-                    <p>Вчера Васька притащил с прогулки игрушечную мышку, а потом час ходил гордый, как лев. Даже не знаю, где он её раздобыл, но вид у него был такой, будто он тигра победил.</p>
+                    <p>Вчера Васька притащил с прогулки игрушечную мышку, а потом час ходил гордый, как лев. Даже не знаю, где он её раздобыл, но вид у него был такой довольный</p>
                     <div class="tags"><span class="tag">#охотник</span><span class="tag">#прогулка</span><span class="tag">#мышка</span></div>
                 </div>
                 <div class="card">
-                    <h3>Маруся-привереда</h3>
+                    <h3>Привереда</h3>
                     <div class="meta"><span><i class="far fa-calendar-alt"></i> 01.06.2026</span><span><i class="far fa-comment"></i> 11</span></div>
-                    <p>Маруся отказалась от свежего корма, потому что он был не той температуры. Пришлось подогревать, потом остужать, потом снова подогревать. В итоге съела, когда все уже устали. Ну, любим мы её.</p>
-                    <div class="tags"><span class="tag">#привереда</span><span class="tag">#еда</span><span class="tag">#капризы</span></div>
+                    <p>Маруся отказалась от свежего корма. Пришлось подогревать, потом остужать, потом снова подогревать. В итоге съела, когда все уже устали. Ну, любим мы её.</p>
+                    <div class="tags"><span class="tag">#корм</span><span class="tag">#еда</span><span class="tag">#капризы</span></div>
                 </div>
                 <div class="card">
-                    <h3>Тимоша-музыкант</h3>
+                    <h3>Музыкальный Мяу</h3>
                     <div class="meta"><span><i class="far fa-calendar-alt"></i> 29.05.2026</span><span><i class="far fa-comment"></i> 25</span></div>
                     <p>Тимоша обожает сидеть на пианино и «подпевать», когда я играю. Особенно если это что-то грустное — он начинает мяукать в такт. Говорят, у нас неплохой дуэт, хотя соседи так не считают.</p>
-                    <div class="tags"><span class="tag">#музыкант</span><span class="tag">#пианино</span><span class="tag">#дуэт</span></div>
+                    <div class="tags"><span class="tag">#музыкант</span><span class="tag">#пианино</span><span class="tag">#мяу</span></div>
                 </div>
                 <div class="card">
-                    <h3>Пушок-путешественник</h3>
+                    <h3>Премя преключений</h3>
                     <div class="meta"><span><i class="far fa-calendar-alt"></i> 27.05.2026</span><span><i class="far fa-comment"></i> 9</span></div>
-                    <p>Пушок сбежал на лестничную клетку и исследовал все этажи. Когда я нашла его на восьмом (мы живём на третьем), он сидел и смотрел на лифт с таким видом, будто разгадывает тайну мироздания. Забрали, конечно, но он был явно разочарован.</p>
+                    <p>Пушок сбежал на лестничную клетку и исследовал все этажи. Когда я нашла его на восьмом (мы живём на третьем), он сидел и смотрел на лифт с таким видом, будто разгадывает тайну мироздания. Забрали, конечно, и он был явно разочарован.</p>
                     <div class="tags"><span class="tag">#путешественник</span><span class="tag">#приключения</span><span class="tag">#любопытство</span></div>
                 </div>
             </div>
@@ -765,7 +765,7 @@
                 if (form) {
                     form.addEventListener('submit', function(e) {
                         e.preventDefault();
-                        alert('🐱 Спасибо! Ваше сообщение отправлено (в демо-режиме). Мы мурчим от радости!');
+                        alert('🐱 Спасибо! Ваше сообщение отправлено!');
                         form.reset();
                     });
                 }
