@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мурр ✦ Блог любителей кошек</title>
-    <!-- Font Awesome для иконок -->
+    <!-- Font Awesome для иконок (социальные сети, контакты) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* ---------- ГЛОБАЛЬНЫЙ СБРОС И ПЕРЕМЕННЫЕ ---------- */
@@ -45,7 +45,7 @@
             width: 100%;
         }
 
-        /* ---------- ШАПКА ---------- */
+        /* ---------- ШАПКА (ХЕДЕР) ---------- */
         .header {
             background: var(--bg-card);
             border-bottom: 2px solid var(--border-soft);
@@ -139,6 +139,7 @@
             padding: 20px 0 40px;
         }
 
+        /* заголовки страниц */
         .page-title {
             font-size: 2.4rem;
             font-weight: 700;
@@ -156,7 +157,7 @@
             margin-bottom: 32px;
         }
 
-        /* карточки для постов */
+        /* карточки для постов / контента */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -171,8 +172,6 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             border: 1px solid var(--border-soft);
-            display: flex;
-            flex-direction: column;
         }
 
         .card:hover {
@@ -192,20 +191,11 @@
             margin-bottom: 12px;
             display: flex;
             gap: 12px;
-            flex-wrap: wrap;
         }
 
         .card p {
             color: var(--text-main);
             margin-bottom: 12px;
-            flex: 1;
-        }
-
-        .card .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 8px;
         }
 
         .card .tag {
@@ -218,7 +208,7 @@
             font-weight: 500;
         }
 
-        /* ---------- ФОРМА ---------- */
+        /* ---------- ФОРМА ОБРАТНОЙ СВЯЗИ ---------- */
         .contact-form {
             background: var(--bg-card);
             padding: 36px 40px;
@@ -281,7 +271,7 @@
             box-shadow: 0 8px 18px rgba(180, 90, 70, 0.25);
         }
 
-        /* ---------- ПОДВАЛ ---------- */
+        /* ---------- ПОДВАЛ (ФУТЕР) ---------- */
         .footer {
             background: #2f2420;
             color: #f0e3d9;
@@ -367,7 +357,7 @@
             }
         }
 
-        /* ---------- СТИЛИ ДЛЯ СТРАНИЦ ---------- */
+        /* ---------- СТИЛИ ДЛЯ ОТДЕЛЬНЫХ СТРАНИЦ (примеры) ---------- */
         .about-text {
             background: var(--bg-card);
             padding: 30px 36px;
@@ -401,48 +391,10 @@
             color: var(--primary);
         }
 
-        .rules-block {
-            margin-top: 32px;
-            background: var(--secondary);
-            padding: 24px 32px;
-            border-radius: var(--radius);
-            border-left: 6px solid var(--primary);
-        }
-
-        .rules-block h3 {
-            font-size: 1.6rem;
-            color: var(--primary-dark);
-            margin-bottom: 12px;
-        }
-
-        .rules-block ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .rules-block ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border-soft);
-            display: flex;
-            gap: 12px;
-            align-items: baseline;
-        }
-
-        .rules-block ul li:last-child {
-            border-bottom: none;
-        }
-
-        .rules-block ul li i {
-            color: var(--primary);
-            width: 24px;
-            text-align: center;
-            font-size: 1.1rem;
-        }
-
-        /* ---------- ГАЛЕРЕЯ С РЕАЛЬНЫМИ ФОТО ---------- */
+        /* галерея (для страницы "Галерея") */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 24px;
             margin: 28px 0;
         }
@@ -452,33 +404,18 @@
             text-align: center;
             background: var(--bg-card);
             border-radius: 32px;
-            overflow: hidden;
         }
 
-        .gallery-grid .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 24px;
-            transition: var(--transition);
-            display: block;
-        }
-
-        .gallery-grid .card:hover img {
-            transform: scale(1.03);
-        }
-
-        .gallery-grid .card p {
-            margin: 12px 0 4px 0;
-            font-weight: 600;
-            color: var(--primary-dark);
-            font-size: 1.1rem;
+        .gallery-grid .card i {
+            font-size: 4.4rem;
+            color: var(--primary);
+            margin: 16px 0 6px;
         }
     </style>
 </head>
 <body>
 
-<!-- ========== ШАПКА ========== -->
+<!-- ========== ШАПКА (ХЕДЕР) ========== -->
 <header class="header">
     <div class="container">
         <div class="logo">
@@ -498,73 +435,29 @@
 <main class="main-content">
     <div class="container">
 
-        <!-- ХЛЕБНЫЕ КРОШКИ -->
+        <!-- ХЛЕБНЫЕ КРОШКИ (динамические через JS) -->
         <div class="breadcrumb" id="breadcrumb">
             <a href="#">Главная</a>
             <i class="fas fa-chevron-right"></i>
             <span class="current" id="breadcrumb-current">Блог</span>
         </div>
 
-        <!-- КОНТЕЙНЕР ДЛЯ ДИНАМИЧЕСКОГО КОНТЕНТА -->
+        <!-- КОНТЕЙНЕР ДЛЯ ДИНАМИЧЕСКОГО КОНТЕНТА СТРАНИЦ -->
         <div id="page-content">
             <!-- начальное содержимое — Главная -->
             <h1 class="page-title">🐾 Мурр-посты</h1>
             <p class="page-subtitle">Свежие истории от любителей кошек</p>
             <div class="card-grid" id="home-grid">
-                <div class="card">
-                    <h3>Соня-лежебока</h3>
-                    <div class="meta"><span><i class="far fa-calendar-alt"></i> 12.06.2026</span><span><i class="far fa-comment"></i> 14</span></div>
-                    <p>Рыжая Соня обожает спать на солнце. За день она меняет 5 мест, но всегда находит самый тёплый уголок ☀️</p>
-                    <div class="tags"><span class="tag">#лежебока</span><span class="tag">#солнце</span><span class="tag">#рыжий</span></div>
-                </div>
-                <div class="card">
-                    <h3>Мурзик-исследователь</h3>
-                    <div class="meta"><span><i class="far fa-calendar-alt"></i> 10.06.2026</span><span><i class="far fa-comment"></i> 8</span></div>
-                    <p>Мурзик открыл новую коробку из-под чайника. Теперь это его личная крепость, вход строго по паролю.</p>
-                    <div class="tags"><span class="tag">#исследователь</span><span class="tag">#коробки</span><span class="tag">#крепость</span></div>
-                </div>
-                <div class="card">
-                    <h3>Королева Багира</h3>
-                    <div class="meta"><span><i class="far fa-calendar-alt"></i> 08.06.2026</span><span><i class="far fa-comment"></i> 21</span></div>
-                    <p>Чёрная красавица Багира требует почесать ей живот. Но только когда она сама этого захочет. График — по настроению.</p>
-                    <div class="tags"><span class="tag">#королева</span><span class="tag">#черная</span><span class="tag">#нежность</span></div>
-                </div>
-                <div class="card">
-                    <h3>Котята-карапузы</h3>
-                    <div class="meta"><span><i class="far fa-calendar-alt"></i> 05.06.2026</span><span><i class="far fa-comment"></i> 32</span></div>
-                    <p>Трое малышей устроили гонки по коридору. Победила дружба и разбитая ваза (но мы не будем о грустном).</p>
-                    <div class="tags"><span class="tag">#карапузы</span><span class="tag">#игры</span><span class="tag">#гонки</span></div>
-                </div>
-                <div class="card">
-                    <h3>Васька-охотник</h3>
-                    <div class="meta"><span><i class="far fa-calendar-alt"></i> 03.06.2026</span><span><i class="far fa-comment"></i> 17</span></div>
-                    <p>Вчера Васька притащил с прогулки игрушечную мышку, а потом час ходил гордый, как лев. Даже не знаю, где он её раздобыл, но вид у него был такой, будто он тигра победил.</p>
-                    <div class="tags"><span class="tag">#охотник</span><span class="tag">#прогулка</span><span class="tag">#мышка</span></div>
-                </div>
-                <div class="card">
-                    <h3>Маруся-привереда</h3>
-                    <div class="meta"><span><i class="far fa-calendar-alt"></i> 01.06.2026</span><span><i class="far fa-comment"></i> 11</span></div>
-                    <p>Маруся отказалась от свежего корма, потому что он был не той температуры. Пришлось подогревать, потом остужать, потом снова подогревать. В итоге съела, когда все уже устали. Ну, любим мы её.</p>
-                    <div class="tags"><span class="tag">#привереда</span><span class="tag">#еда</span><span class="tag">#капризы</span></div>
-                </div>
-                <div class="card">
-                    <h3>Тимоша-музыкант</h3>
-                    <div class="meta"><span><i class="far fa-calendar-alt"></i> 29.05.2026</span><span><i class="far fa-comment"></i> 25</span></div>
-                    <p>Тимоша обожает сидеть на пианино и «подпевать», когда я играю. Особенно если это что-то грустное — он начинает мяукать в такт. Говорят, у нас неплохой дуэт, хотя соседи так не считают.</p>
-                    <div class="tags"><span class="tag">#музыкант</span><span class="tag">#пианино</span><span class="tag">#дуэт</span></div>
-                </div>
-                <div class="card">
-                    <h3>Пушок-путешественник</h3>
-                    <div class="meta"><span><i class="far fa-calendar-alt"></i> 27.05.2026</span><span><i class="far fa-comment"></i> 9</span></div>
-                    <p>Пушок сбежал на лестничную клетку и исследовал все этажи. Когда я нашла его на восьмом (мы живём на третьем), он сидел и смотрел на лифт с таким видом, будто разгадывает тайну мироздания. Забрали, конечно, но он был явно разочарован.</p>
-                    <div class="tags"><span class="tag">#путешественник</span><span class="tag">#приключения</span><span class="tag">#любопытство</span></div>
-                </div>
+                <div class="card"><h3>Соня-лежебока</h3><div class="meta"><span><i class="far fa-calendar-alt"></i> 12.06.2026</span><span><i class="far fa-comment"></i> 14</span></div><p>Рыжая Соня обожает спать на солнце. За день она меняет 5 мест, но всегда находит самый тёплый уголок ☀️</p><span class="tag">#лежебока</span></div>
+                <div class="card"><h3>Мурзик-исследователь</h3><div class="meta"><span><i class="far fa-calendar-alt"></i> 10.06.2026</span><span><i class="far fa-comment"></i> 8</span></div><p>Мурзик открыл новую коробку из-под чайника. Теперь это его личная крепость, вход строго по паролю.</p><span class="tag">#исследователь</span></div>
+                <div class="card"><h3>Королева Багира</h3><div class="meta"><span><i class="far fa-calendar-alt"></i> 08.06.2026</span><span><i class="far fa-comment"></i> 21</span></div><p>Чёрная красавица Багира требует почесать ей живот. Но только когда она сама этого захочет. График — по настроению.</p><span class="tag">#королева</span></div>
+                <div class="card"><h3>Котята-карапузы</h3><div class="meta"><span><i class="far fa-calendar-alt"></i> 05.06.2026</span><span><i class="far fa-comment"></i> 32</span></div><p>Трое малышей устроили гонки по коридору. Победила дружба и разбитая ваза (но мы не будем о грустном).</p><span class="tag">#карапузы</span></div>
             </div>
         </div>
     </div>
 </main>
 
-<!-- ========== ПОДВАЛ ========== -->
+<!-- ========== ПОДВАЛ (ФУТЕР) ========== -->
 <footer class="footer">
     <div class="container">
         <div class="footer-col">
@@ -593,7 +486,7 @@
 </footer>
 
 
-<!-- ========== JavaScript ========== -->
+<!-- ========== JavaScript (роутинг 5 страниц, хлебные крошки) ========== -->
 <script>
     (function() {
         // ----- ДАННЫЕ СТРАНИЦ -----
@@ -605,54 +498,10 @@
                     <h1 class="page-title">🐾 Мурр-посты</h1>
                     <p class="page-subtitle">Свежие истории от любителей кошек</p>
                     <div class="card-grid">
-                        <div class="card">
-                            <h3>Соня-лежебока</h3>
-                            <div class="meta"><span><i class="far fa-calendar-alt"></i> 12.06.2026</span><span><i class="far fa-comment"></i> 14</span></div>
-                            <p>Рыжая Соня обожает спать на солнце. За день она меняет 5 мест, но всегда находит самый тёплый уголок ☀️</p>
-                            <div class="tags"><span class="tag">#лежебока</span><span class="tag">#солнце</span><span class="tag">#рыжий</span></div>
-                        </div>
-                        <div class="card">
-                            <h3>Мурзик-исследователь</h3>
-                            <div class="meta"><span><i class="far fa-calendar-alt"></i> 10.06.2026</span><span><i class="far fa-comment"></i> 8</span></div>
-                            <p>Мурзик открыл новую коробку из-под чайника. Теперь это его личная крепость, вход строго по паролю.</p>
-                            <div class="tags"><span class="tag">#исследователь</span><span class="tag">#коробки</span><span class="tag">#крепость</span></div>
-                        </div>
-                        <div class="card">
-                            <h3>Королева Багира</h3>
-                            <div class="meta"><span><i class="far fa-calendar-alt"></i> 08.06.2026</span><span><i class="far fa-comment"></i> 21</span></div>
-                            <p>Чёрная красавица Багира требует почесать ей живот. Но только когда она сама этого захочет. График — по настроению.</p>
-                            <div class="tags"><span class="tag">#королева</span><span class="tag">#черная</span><span class="tag">#нежность</span></div>
-                        </div>
-                        <div class="card">
-                            <h3>Котята-карапузы</h3>
-                            <div class="meta"><span><i class="far fa-calendar-alt"></i> 05.06.2026</span><span><i class="far fa-comment"></i> 32</span></div>
-                            <p>Трое малышей устроили гонки по коридору. Победила дружба и разбитая ваза (но мы не будем о грустном).</p>
-                            <div class="tags"><span class="tag">#карапузы</span><span class="tag">#игры</span><span class="tag">#гонки</span></div>
-                        </div>
-                        <div class="card">
-                            <h3>Васька-охотник</h3>
-                            <div class="meta"><span><i class="far fa-calendar-alt"></i> 03.06.2026</span><span><i class="far fa-comment"></i> 17</span></div>
-                            <p>Вчера Васька притащил с прогулки игрушечную мышку, а потом час ходил гордый, как лев. Даже не знаю, где он её раздобыл, но вид у него был такой, будто он тигра победил.</p>
-                            <div class="tags"><span class="tag">#охотник</span><span class="tag">#прогулка</span><span class="tag">#мышка</span></div>
-                        </div>
-                        <div class="card">
-                            <h3>Маруся-привереда</h3>
-                            <div class="meta"><span><i class="far fa-calendar-alt"></i> 01.06.2026</span><span><i class="far fa-comment"></i> 11</span></div>
-                            <p>Маруся отказалась от свежего корма, потому что он был не той температуры. Пришлось подогревать, потом остужать, потом снова подогревать. В итоге съела, когда все уже устали. Ну, любим мы её.</p>
-                            <div class="tags"><span class="tag">#привереда</span><span class="tag">#еда</span><span class="tag">#капризы</span></div>
-                        </div>
-                        <div class="card">
-                            <h3>Тимоша-музыкант</h3>
-                            <div class="meta"><span><i class="far fa-calendar-alt"></i> 29.05.2026</span><span><i class="far fa-comment"></i> 25</span></div>
-                            <p>Тимоша обожает сидеть на пианино и «подпевать», когда я играю. Особенно если это что-то грустное — он начинает мяукать в такт. Говорят, у нас неплохой дуэт, хотя соседи так не считают.</p>
-                            <div class="tags"><span class="tag">#музыкант</span><span class="tag">#пианино</span><span class="tag">#дуэт</span></div>
-                        </div>
-                        <div class="card">
-                            <h3>Пушок-путешественник</h3>
-                            <div class="meta"><span><i class="far fa-calendar-alt"></i> 27.05.2026</span><span><i class="far fa-comment"></i> 9</span></div>
-                            <p>Пушок сбежал на лестничную клетку и исследовал все этажи. Когда я нашла его на восьмом (мы живём на третьем), он сидел и смотрел на лифт с таким видом, будто разгадывает тайну мироздания. Забрали, конечно, но он был явно разочарован.</p>
-                            <div class="tags"><span class="tag">#путешественник</span><span class="tag">#приключения</span><span class="tag">#любопытство</span></div>
-                        </div>
+                        <div class="card"><h3>Соня-лежебока</h3><div class="meta"><span><i class="far fa-calendar-alt"></i> 12.06.2026</span><span><i class="far fa-comment"></i> 14</span></div><p>Рыжая Соня обожает спать на солнце. За день она меняет 5 мест, но всегда находит самый тёплый уголок ☀️</p><span class="tag">#лежебока</span></div>
+                        <div class="card"><h3>Мурзик-исследователь</h3><div class="meta"><span><i class="far fa-calendar-alt"></i> 10.06.2026</span><span><i class="far fa-comment"></i> 8</span></div><p>Мурзик открыл новую коробку из-под чайника. Теперь это его личная крепость, вход строго по паролю.</p><span class="tag">#исследователь</span></div>
+                        <div class="card"><h3>Королева Багира</h3><div class="meta"><span><i class="far fa-calendar-alt"></i> 08.06.2026</span><span><i class="far fa-comment"></i> 21</span></div><p>Чёрная красавица Багира требует почесать ей живот. Но только когда она сама этого захочет. График — по настроению.</p><span class="tag">#королева</span></div>
+                        <div class="card"><h3>Котята-карапузы</h3><div class="meta"><span><i class="far fa-calendar-alt"></i> 05.06.2026</span><span><i class="far fa-comment"></i> 32</span></div><p>Трое малышей устроили гонки по коридору. Победила дружба и разбитая ваза (но мы не будем о грустном).</p><span class="tag">#карапузы</span></div>
                     </div>
                 `
             },
@@ -671,18 +520,6 @@
                             <div class="team-item"><i class="fas fa-user-circle"></i> Маша — волонтёр</div>
                             <div class="team-item"><i class="fas fa-user-circle"></i> Барсик — главный кот</div>
                         </div>
-
-                        <div class="rules-block">
-                            <h3><i class="fas fa-gavel"></i> Правила сообщества</h3>
-                            <ul>
-                                <li><i class="fas fa-heart"></i> Быть добрыми к котам и друг к другу. Никакого буллинга, даже в шутку.</li>
-                                <li><i class="fas fa-comment"></i> Делиться историями, даже если они кажутся смешными или нелепыми — мы любим любые.</li>
-                                <li><i class="fas fa-camera"></i> Фото и видео приветствуются, но без жестокости и унижения животных.</li>
-                                <li><i class="fas fa-lightbulb"></i> Конструктивная критика и советы — да, токсичность — нет.</li>
-                                <li><i class="fas fa-shield-alt"></i> Уважать чужое мнение, даже если оно не совпадает с вашим.</li>
-                                <li><i class="fas fa-paw"></i> Помнить: все кошки — прекрасны, независимо от породы, возраста и характера.</li>
-                            </ul>
-                        </div>
                     </div>
                 `
             },
@@ -691,40 +528,14 @@
                 breadcrumb: 'Галерея',
                 render: () => `
                     <h1 class="page-title">📸 Кошачья галерея</h1>
-                    <p class="page-subtitle">Реальные фото наших пушистых друзей</p>
+                    <p class="page-subtitle">Лучшие моменты наших пушистых друзей</p>
                     <div class="gallery-grid">
-                        <div class="card">
-                            <img src="https://picsum.photos/id/219/400/300" alt="Рыжик" loading="lazy">
-                            <p>Рыжик</p>
-                        </div>
-                        <div class="card">
-                            <img src="https://picsum.photos/id/219/400/300?random=1" alt="Снежок" loading="lazy">
-                            <p>Снежок</p>
-                        </div>
-                        <div class="card">
-                            <img src="https://picsum.photos/id/219/400/300?random=2" alt="Персик" loading="lazy">
-                            <p>Персик</p>
-                        </div>
-                        <div class="card">
-                            <img src="https://picsum.photos/id/219/400/300?random=3" alt="Барсик" loading="lazy">
-                            <p>Барсик</p>
-                        </div>
-                        <div class="card">
-                            <img src="https://picsum.photos/id/219/400/300?random=4" alt="Мурка" loading="lazy">
-                            <p>Мурка</p>
-                        </div>
-                        <div class="card">
-                            <img src="https://picsum.photos/id/219/400/300?random=5" alt="Тигря" loading="lazy">
-                            <p>Тигря</p>
-                        </div>
-                        <div class="card">
-                            <img src="https://picsum.photos/id/219/400/300?random=6" alt="Беляш" loading="lazy">
-                            <p>Беляш</p>
-                        </div>
-                        <div class="card">
-                            <img src="https://picsum.photos/id/219/400/300?random=7" alt="Дымок" loading="lazy">
-                            <p>Дымок</p>
-                        </div>
+                        <div class="card"><i class="fas fa-cat"></i><p>Рыжик</p></div>
+                        <div class="card"><i class="fas fa-cat"></i><p>Снежок</p></div>
+                        <div class="card"><i class="fas fa-cat"></i><p>Персик</p></div>
+                        <div class="card"><i class="fas fa-cat"></i><p>Барсик</p></div>
+                        <div class="card"><i class="fas fa-cat"></i><p>Мурка</p></div>
+                        <div class="card"><i class="fas fa-cat"></i><p>Тигря</p></div>
                     </div>
                 `
             },
@@ -774,20 +585,25 @@
         const content = document.getElementById('page-content');
         const breadcrumbCurrent = document.getElementById('breadcrumb-current');
         const navLinks = document.querySelectorAll('.nav-menu a');
-        const footerLinks = document.querySelectorAll('.footer-col a');
+        const footerLinks = document.querySelectorAll('.footer-col a'); // все ссылки в футере, но нужны только навигационные
 
         // ----- ФУНКЦИЯ ПЕРЕХОДА -----
         function navigateTo(pageId) {
             const page = pages[pageId];
             if (!page) return;
 
+            // обновить содержимое
             content.innerHTML = page.render();
+
+            // обновить хлебные крошки
             breadcrumbCurrent.textContent = page.breadcrumb;
 
+            // обновить активный класс в навигации (шапка)
             navLinks.forEach(link => link.classList.remove('active'));
             const activeNav = document.getElementById(`nav-${pageId}`);
             if (activeNav) activeNav.classList.add('active');
 
+            // если страница "feedback" — вешаем обработчик на форму (после рендера)
             if (pageId === 'feedback') {
                 const form = document.getElementById('feedbackForm');
                 if (form) {
@@ -799,10 +615,11 @@
                 }
             }
 
+            // прокрутка наверх
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // ----- ОБРАБОТЧИКИ -----
+        // ----- ОБРАБОТЧИКИ НАВИГАЦИИ (шапка) -----
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -811,24 +628,30 @@
             });
         });
 
+        // ----- ОБРАБОТЧИКИ ФУТЕРА (только навигационные ссылки) -----
         document.querySelectorAll('.footer-col a').forEach(link => {
             link.addEventListener('click', function(e) {
+                // если ссылка содержит # или пустой href, перехватываем
                 const href = this.getAttribute('href');
                 if (href && href.startsWith('#')) {
                     e.preventDefault();
+                    // определяем id страницы по id ссылки (footer-home и т.д.)
                     const id = this.id.replace('footer-', '');
                     if (pages[id]) navigateTo(id);
                 }
             });
         });
 
+        // ----- СТАРТ: ГЛАВНАЯ -----
         navigateTo('home');
 
+        // также чтобы ссылки в логотипе вели на главную
         document.querySelector('.logo a')?.addEventListener('click', function(e) {
             e.preventDefault();
             navigateTo('home');
         });
 
+        // обработка для "хлебных крошек" - клик по "Главная" ведёт на home
         document.querySelector('.breadcrumb a')?.addEventListener('click', function(e) {
             e.preventDefault();
             navigateTo('home');
